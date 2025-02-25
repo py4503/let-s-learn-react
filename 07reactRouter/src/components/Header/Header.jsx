@@ -1,14 +1,15 @@
 import React from 'react'
-
+import { Link,NavLink } from 'react-router-dom';
+import logo from '../../assets/logo.png'
 export default function Header() {
     return (
         <header className="shadow sticky z-50 top-0">
             <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5">
-                <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+                <div className="flex flex-wrap justify-between items-center mx-auto">
                     <Link to="/" className="flex items-center">
                         <img
-                            src="https://alexharkness.com/wp-content/uploads/2020/06/logo-2.png"
-                            className="mr-3 h-12"
+                            src={logo}
+                            className="mr-4 h-14"
                             alt="Logo"
                         />
                     </Link>
@@ -33,16 +34,76 @@ export default function Header() {
                         <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
                             <li>
                                 <NavLink
+                                to="/"
                                     className={({isActive}) =>{
-                                        ` ${isActive?"text-gray":"text-blue-400"} block py-2 pr-4 pl-3 duration-200 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
+                                        // have to return explicitly when use curly braces
+                                       return `  block py-2 pr-4 pl-3 duration-200 ${isActive?"text-orange-800":"text-blue-400"} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
                                     }
                                     }
                                 >
                                     Home
                                 </NavLink>
                             </li>
-                            
-                            
+                            <li>
+                                <NavLink
+                                to="Videos"
+                                    className={({isActive}) =>{
+                                        // have to return explicitly when use curly braces
+                                       return `  block py-2 pr-4 pl-3 duration-200 ${isActive?"text-orange-800":"text-blue-400"} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
+                                    }
+                                    }
+                                >
+                                    Videos
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink
+                                to="Play"
+                                    className={({isActive}) =>{
+                                        // have to return explicitly when use curly braces
+                                       return `  block py-2 pr-4 pl-3 duration-200 ${isActive?"text-orange-800":"text-blue-400"} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
+                                    }
+                                    }
+                                >
+                                    images
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink
+                                to="H"
+                                    className={({isActive}) =>{
+                                        // have to return explicitly when use curly braces
+                                       return `  block py-2 pr-4 pl-3 duration-200 ${isActive?"text-orange-800":"text-blue-400"} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
+                                    }
+                                    }
+                                >
+                                    Horny
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink
+                                to="Join"
+                                    className={({isActive}) =>{
+                                        // have to return explicitly when use curly braces
+                                       return `  block py-2 pr-4 pl-3 duration-200 ${isActive?"text-orange-800":"text-blue-400"} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
+                                    }
+                                    }
+                                >
+                                    Join
+                                </NavLink>
+                            </li>
+                            <li>
+                            <NavLink
+                                to="subscribe"
+                                    className={({isActive}) =>{
+                                        // have to return explicitly when use curly braces
+                                       return `  block py-2 pr-4 pl-3 duration-200 ${isActive?"text-orange-800":"text-blue-400"} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
+                                    }
+                                    }
+                                >
+                                    subscribe
+                                </NavLink>
+                            </li>
                         </ul>
                     </div>
                 </div>

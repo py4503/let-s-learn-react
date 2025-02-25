@@ -11,7 +11,7 @@ function App() {
   return (
       <>
       <h1 className='bg-black rounded-xl text-white p-4 border-sky-200'>TailWind</h1>
-      <Card username="pratyush" obj={arr} btntext="let's go" />
+      <Card username="pratyush" myObj={myObj} btntext="let's go" />
       </>
   )
 }
